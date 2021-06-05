@@ -29,3 +29,12 @@
   border: 3px solid rgb(26, 43, 26);
   padding: 10px;
 }
+
+.table-header{
+  background-color: rgb(144, 176, 231);
+}
+.delete{
+  background-color: rgb(201, 64, 91);
+  border: none;
+  border-radius: 0.4vw;
+}
