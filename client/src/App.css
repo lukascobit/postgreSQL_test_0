@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+.header-text{
+  margin: 1vw auto;
+}
+.input-text{
+  background-color: rgb(219, 250, 240);
+  width: 50vw;
+  height: 3vw;
+  border: black 0.1em solid;
+  font-size: 2vw;
+}
+.input-text::selection{
+  background-color: rgb(187, 212, 204);
+}
+.input-button{
+  margin: 0.2vw;
+  background-color: rgb(236, 143, 143);
+  width: 5vw;
+  height: 3.4vw;
+  border: black 0.1em solid;
+  font-size: 2vw;
+}
