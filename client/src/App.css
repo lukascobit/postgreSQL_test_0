@@ -38,3 +38,18 @@
   border: none;
   border-radius: 0.4vw;
 }
+
+.edit-text{
+  position: absolute;
+  right: 5%;
+  width: 5vw;
+  height: 2vw;
+  border: none;
+}
+.edit-text-invisible{
+  position:absolute;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  
+}

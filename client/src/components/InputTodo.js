@@ -14,9 +14,9 @@ function InputTodo() {
                 body: JSON.stringify(body)
             });
             window.location = "/";
-            console.log(response);
+            
         } catch (error) {
-            console.log(error.message);
+            console.error(error.message);
         }
     }
 
@@ -24,7 +24,7 @@ function InputTodo() {
         <div>
             <h1 className="header-text">Input Todo</h1>
             <form className="input-form" onSubmit={onSubmitForm}>
-                <input value={description} onChange={e => setDescription(e.target.value)} type="text" className="input-text"/>
+                <input autoFocus value={description} onChange={e => setDescription(e.target.value)} type="text" className="input-text"/>
                 <button className="input-button">Add</button>
             </form>
         </div>

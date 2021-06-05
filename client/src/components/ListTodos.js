@@ -12,8 +12,9 @@ function ListTodos() {
                 method: "DELETE"
             });
             setTodos(todos.filter(todo => todo.todo_id !== id))
+            
         } catch (error) {
-            console.log(error.message);
+            console.error(error.message);
         }
     }
 
@@ -23,7 +24,7 @@ function ListTodos() {
             const jsonData = await response.json();
             setTodos(jsonData)
         } catch (error) {
-            console.log(error.message);
+            console.error(error.message);
         }
     }
     
@@ -31,7 +32,7 @@ function ListTodos() {
         getTodos();
     }, [])
 
-    console.log(todos);
+    
     return (
         <div className="list-todos">
             <h1>List todos</h1>
@@ -48,7 +49,7 @@ function ListTodos() {
                 {todos.map(todo => (
                     <tr key={todo.todo_id}>
                         <td>{todo.description}</td>
-                        <td><EditTodo/></td>
+                        <td><EditTodo todo={todo}/></td>
                         <td><button onClick={()=> deleteTodo(todo.todo_id)} className="delete">Delete</button></td>
                     </tr>
                 ))}
