@@ -1,4 +1,4 @@
-.App {
+* {
   text-align: center;
 }
 .header-text{
@@ -21,4 +21,11 @@
   height: 3.4vw;
   border: black 0.1em solid;
   font-size: 2vw;
+}
+
+.table{
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(26, 43, 26);
+  padding: 10px;
 }

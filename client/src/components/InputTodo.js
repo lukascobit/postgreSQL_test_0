@@ -2,11 +2,19 @@ import React,{useState} from 'react'
 
 function InputTodo() {
     
-    const [input, setInput] = useState("");
+    const [description, setDescription] = useState("");
 
-    const onSubmitForm = async()=>{
+    const onSubmitForm = async e =>{
+        e.preventDefault()
         try {
-            
+            const body = {description};
+            const response = await fetch("http://localhost:3000/todos", {
+                method: "POST",
+                headers:{"Content-Type": "application/json"},
+                body: JSON.stringify(body)
+            });
+            window.location = "/";
+            console.log(response);
         } catch (error) {
             console.log(error.message);
         }
@@ -15,8 +23,8 @@ function InputTodo() {
     return (
         <div>
             <h1 className="header-text">Input Todo</h1>
-            <form className="input-form">
-                <input value={input} onChange={e => setInput(e.target.value)} type="text" className="input-text"/>
+            <form className="input-form" onSubmit={onSubmitForm}>
+                <input value={description} onChange={e => setDescription(e.target.value)} type="text" className="input-text"/>
                 <button className="input-button">Add</button>
             </form>
         </div>
