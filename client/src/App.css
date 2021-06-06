@@ -1,6 +1,9 @@
 * {
   text-align: center;
 }
+body{
+  background-color: rgb(194, 213, 243);
+}
 .header-text{
   margin: 1vw auto;
 }

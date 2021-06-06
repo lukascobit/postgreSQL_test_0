@@ -62,6 +62,18 @@ app.put("/todos/:id", async(req,res)=>{
     }
 });
 
+//update check
+app.put("/todos/:id", async(req,res)=>{
+    try {
+        const {id} = req.params;
+        const {checked} = req.body;
+        const updateTodo = await pool.query("UPDATE todo SET is_special = $1 WHERE todo_id = $2", [checked, id]);
+        res.json("Todo was just updated!");
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 //delete todo
 
 app.delete("/todos/:id", async (req,res)=>{
